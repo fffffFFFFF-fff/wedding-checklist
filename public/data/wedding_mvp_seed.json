@@ -1,0 +1,197 @@
+{
+  "schema": {
+    "task_template": {
+      "key": "unique_task_key",
+      "title": "Short task title",
+      "description": "Optional helpful tips",
+      "due_offset_days": "Integer days relative to wedding_date (negative=before, 0=day-of, positive=after)",
+      "window": "One of windows keys",
+      "category": "High-level budget/category area",
+      "conditions": {
+        "guests_min": 0,
+        "guests_max": null,
+        "destination": false
+      }
+    },
+    "windows": {
+      "12m_plus": { "label": "12+ months before", "min_offset_days": -9999, "max_offset_days": -360 },
+      "9_12m": { "label": "9–12 months before", "min_offset_days": -360, "max_offset_days": -270 },
+      "6_9m": { "label": "6–9 months before", "min_offset_days": -270, "max_offset_days": -180 },
+      "3_6m": { "label": "3–6 months before", "min_offset_days": -180, "max_offset_days": -90 },
+      "1_3m": { "label": "1–3 months before", "min_offset_days": -90, "max_offset_days": -30 },
+      "1m": { "label": "1 month before", "min_offset_days": -30, "max_offset_days": -15 },
+      "2w": { "label": "2 weeks before", "min_offset_days": -14, "max_offset_days": -7 },
+      "1w": { "label": "1 week before", "min_offset_days": -7, "max_offset_days": -2 },
+      "day_of": { "label": "Wedding day", "min_offset_days": 0, "max_offset_days": 0 },
+      "post": { "label": "After the wedding", "min_offset_days": 1, "max_offset_days": 60 }
+    },
+    "budget_defaults_percent": {
+      "Venue": 40,
+      "Catering": 18,
+      "Photography & Video": 12,
+      "Attire & Beauty": 7,
+      "Flowers & Decor": 8,
+      "Music & Entertainment": 6,
+      "Stationery": 2,
+      "Transportation": 2,
+      "Cake & Desserts": 2,
+      "Favors & Gifts": 2,
+      "Misc & Contingency": 1
+    }
+  },
+  "task_templates": [
+    {
+      "key": "set_budget",
+      "title": "Set overall budget",
+      "description": "Discuss priorities and set a rough total budget.",
+      "due_offset_days": -390,
+      "window": "12m_plus",
+      "category": "Planning",
+      "conditions": {}
+    },
+    {
+      "key": "draft_guest_list",
+      "title": "Draft guest list",
+      "description": "Start a list of invitees to estimate headcount.",
+      "due_offset_days": -390,
+      "window": "12m_plus",
+      "category": "Guests",
+      "conditions": {}
+    },
+    {
+      "key": "research_venues",
+      "title": "Research venues",
+      "description": "Shortlist 3–5 venues based on size, style, and budget.",
+      "due_offset_days": -390,
+      "window": "12m_plus",
+      "category": "Venue",
+      "conditions": {}
+    },
+    {
+      "key": "book_venue",
+      "title": "Book ceremony & reception venue",
+      "description": "Confirm date, deposit, and contract.",
+      "due_offset_days": -330,
+      "window": "9_12m",
+      "category": "Venue",
+      "conditions": {}
+    },
+    {
+      "key": "book_photographer",
+      "title": "Book photographer",
+      "description": "",
+      "due_offset_days": -315,
+      "window": "9_12m",
+      "category": "Photography & Video",
+      "conditions": {}
+    },
+    {
+      "key": "send_save_the_dates",
+      "title": "Send save-the-dates",
+      "description": "Especially important for destination or holiday weddings.",
+      "due_offset_days": -240,
+      "window": "6_9m",
+      "category": "Stationery",
+      "conditions": {}
+    },
+    {
+      "key": "shop_attire",
+      "title": "Shop for attire (dress/suit)",
+      "description": "Include time for alterations.",
+      "due_offset_days": -255,
+      "window": "6_9m",
+      "category": "Attire & Beauty",
+      "conditions": {}
+    },
+    {
+      "key": "book_florist",
+      "title": "Book florist",
+      "description": "",
+      "due_offset_days": -240,
+      "window": "6_9m",
+      "category": "Flowers & Decor",
+      "conditions": {}
+    },
+    {
+      "key": "mail_invitations",
+      "title": "Mail invitations",
+      "description": "Include RSVP deadline ~6–8 weeks before.",
+      "due_offset_days": -135,
+      "window": "3_6m",
+      "category": "Stationery",
+      "conditions": {}
+    },
+    {
+      "key": "order_rings",
+      "title": "Order wedding rings",
+      "description": "",
+      "due_offset_days": -150,
+      "window": "3_6m",
+      "category": "Attire & Beauty",
+      "conditions": {}
+    },
+    {
+      "key": "attire_fittings",
+      "title": "Attire fittings & alterations",
+      "description": "",
+      "due_offset_days": -60,
+      "window": "1_3m",
+      "category": "Attire & Beauty",
+      "conditions": {}
+    },
+    {
+      "key": "apply_marriage_licence",
+      "title": "Apply for marriage licence",
+      "description": "Observe waiting periods & expiry for your location.",
+      "due_offset_days": -45,
+      "window": "1_3m",
+      "category": "Ceremony",
+      "conditions": {}
+    },
+    {
+      "key": "final_fitting",
+      "title": "Final attire fitting & pick-up",
+      "description": "",
+      "due_offset_days": -30,
+      "window": "1m",
+      "category": "Attire & Beauty",
+      "conditions": {}
+    },
+    {
+      "key": "confirm_headcount",
+      "title": "Give final headcount to caterer/venue",
+      "description": "",
+      "due_offset_days": -14,
+      "window": "2w",
+      "category": "Catering",
+      "conditions": {}
+    },
+    {
+      "key": "pack_items",
+      "title": "Pack decor, signage, rings, licence, tips",
+      "description": "",
+      "due_offset_days": -6,
+      "window": "1w",
+      "category": "Planning",
+      "conditions": {}
+    },
+    {
+      "key": "wedding_day_enjoy",
+      "title": "Enjoy the day!",
+      "description": "",
+      "due_offset_days": 0,
+      "window": "day_of",
+      "category": "Planning",
+      "conditions": {}
+    },
+    {
+      "key": "thank_you_cards",
+      "title": "Send thank-you cards",
+      "description": "",
+      "due_offset_days": 14,
+      "window": "post",
+      "category": "Stationery",
+      "conditions": {}
+    }
+  ]
+}
