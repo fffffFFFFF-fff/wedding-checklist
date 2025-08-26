@@ -104,6 +104,9 @@ export default function PlanPage() {
       <p style={{margin: "8px 0"}}><strong>Date:</strong> {weddingDate ? fmt(weddingDate) : "—"}</p>
       <p style={{margin: "8px 0"}}><strong>Budget:</strong> {budgetStr ? `£${Number(budgetStr).toLocaleString()}` : "—"}</p>
       <p style={{margin: "8px 0", color: "#444"}}>{countdownText}</p>
+      <p style={{margin: "8px 0"}}>
+        <a href="/budget">Open budget planner →</a>
+      </p>
 
       <section style={{marginTop: 24}}>
         <h2>Upcoming (next 30 days)</h2>
