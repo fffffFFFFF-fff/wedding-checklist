@@ -85,7 +85,21 @@ export default function PlanPage() {
     setTaskStatus(next);
     localStorage.setItem("taskStatus", JSON.stringify(next));
   }
+async function buyPremium() {
+  try {
+    const res = await fetch("/api/checkout", { method: "POST" });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert(data.error || "Checkout failed. Please try again.");
+    }
+  } catch {
+    alert("Could not start checkout.");
+  }
+}
 
+  
   if (loading) {
     return <main style={{maxWidth: 900, margin: "40px auto", padding: 16, fontFamily: "system-ui"}}>Loading…</main>;
   }
