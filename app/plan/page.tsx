@@ -121,7 +121,23 @@ async function buyPremium() {
       <p style={{margin: "8px 0"}}>
         <a href="/budget">Open budget planner →</a>
       </p>
-
+<div style={{margin: "12px 0", padding: 12, border: "1px dashed #aaa", borderRadius: 8}}>
+  <div style={{marginBottom: 8}}>
+    <strong>Premium:</strong> Download CSV and a print-friendly PDF version.
+  </div>
+  <button onClick={buyPremium} style={{
+    padding: "10px 16px",
+    border: "1px solid #333",
+    borderRadius: 8,
+    background: "#fff",
+    cursor: "pointer"
+  }}>
+    Buy Premium (£10)
+  </button>
+  <span style={{marginLeft: 10}}>
+    or <a href="/export">go to exports</a> (requires purchase)
+  </span>
+</div>
       <section style={{marginTop: 24}}>
         <h2>Upcoming (next 30 days)</h2>
         <ul>
