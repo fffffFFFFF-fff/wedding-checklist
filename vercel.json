@@ -1,0 +1,4 @@
+{
+  "installCommand": "npm install stripe@14.23.0 && npm install",
+  "buildCommand": "npm run build"
+}
